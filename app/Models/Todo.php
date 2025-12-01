@@ -6,14 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Todo extends Model
 {
-	/**
-	 * The attributes that are mass assignable.
-	 *
-	 * @var array
-	 */
-	protected $fillable = [
-		'title',
-		'description',
-		'is_completed',
-	];
+    protected $fillable = [
+        'title',
+        'is_completed',
+    ];
+
+    protected $casts = [
+        'is_completed' => 'boolean',
+    ];
 }
